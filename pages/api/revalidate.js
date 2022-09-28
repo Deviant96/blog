@@ -43,9 +43,9 @@ export default async function handler(req, res) {
     // console.log('[Next.js] Revalidating /')
     await res.revalidate('/')
 
-    if (issueNumber) {
-      await res.revalidate(`/posts/${issueNumber}`)
-    }
+    // if (issueNumber) {
+    //   await res.revalidate(`/posts/${issueNumber}`)
+    // }
 
     // if (body.data.slug) {
       // console.log(`[Next.js] Revalidating /posts/${body.data.slug}`)  // I checked, the path with slug is correct on logs
@@ -57,8 +57,8 @@ export default async function handler(req, res) {
     return res.json({ 
       revalidated: true, 
       path: cobaPath || null, 
-      cobabaru: getData || null,
-      poi: `/posts/${getData}`,
+      cobabaru: getData.slug || null,
+      poi: `/posts/${getData.slug}`,
 
       // cobaPaths: getPaths || null,
       // cobaPath: getPath || null,
