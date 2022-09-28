@@ -47,7 +47,7 @@ export default async function handler(req, res) {
 
     if (getData.slug) {
       // await res.revalidate(`/posts/${getData.slug}`);
-      nyoba = "ada slug";
+      // nyoba = "ada slug";
     }
 
     // if (body.data.slug) {
