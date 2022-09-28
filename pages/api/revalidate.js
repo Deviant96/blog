@@ -64,7 +64,6 @@ export default async function handler(req, res) {
       poi: `/posts/${getData.slug}`,
       nyoba: nyoba,
       queryPath: req.query.path,
-      revalidationURL: req.body.revalidationURL,
 
       // cobaPaths: getPaths || null,
       // cobaPath: getPath || null,
