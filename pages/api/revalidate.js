@@ -43,10 +43,10 @@ export default async function handler(req, res) {
     // Sudah : props, params, operation, data, posts, post, query, body
     
     // console.log('[Next.js] Revalidating /')
-    await res.revalidate('/')
+    await res.revalidate('/');
 
     if (getData.slug) {
-      // await res.revalidate(`/posts/${getData.slug}`);
+      await res.revalidate(`/posts/${getData.slug}`);
       // nyoba = "ada slug";
     }
 
