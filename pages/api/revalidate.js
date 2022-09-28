@@ -63,8 +63,6 @@ export default async function handler(req, res) {
       cobabaru: getData.slug || null,
       poi: `/posts/${getData.slug}`,
       nyoba: nyoba,
-      queryPath: req.query.path,
-      revalidationURL: req.body.revalidationURL,
 
       // cobaPaths: getPaths || null,
       // cobaPath: getPath || null,
@@ -77,7 +75,7 @@ export default async function handler(req, res) {
       // cobaSlugDua: getDataDua.slug || null,
 
       // tesbody: req.body || null,
-      tesisibody: req.body.data.slug || null,
+      // tesisibody: req.body.data.slug || null,
     })
   } catch (err) {
     // If there was an error, Next.js will continue
