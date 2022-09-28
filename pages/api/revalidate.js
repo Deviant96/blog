@@ -57,8 +57,8 @@ export default async function handler(req, res) {
     return res.json({ 
       revalidated: true, 
       path: cobaPath || null, 
-      cobabaru: issueNumber || null,
-      poi: `/posts/${issueNumber}`,
+      cobabaru: getData || null,
+      poi: `/posts/${getData}`,
 
       // cobaPaths: getPaths || null,
       // cobaPath: getPath || null,
