@@ -43,9 +43,9 @@ export default async function handler(req, res) {
     // console.log('[Next.js] Revalidating /')
     await res.revalidate('/')
 
-    // if (issueNumber) {
-    //   await res.revalidate(`/posts/${issueNumber}`)
-    // }
+    if (getData.slug) {
+      await res.revalidate(`/posts/${getData.slug}`)
+    }
 
     // if (body.data.slug) {
       // console.log(`[Next.js] Revalidating /posts/${body.data.slug}`)  // I checked, the path with slug is correct on logs
