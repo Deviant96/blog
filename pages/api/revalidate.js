@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     await res.revalidate('/')
 
     if (getData.slug) {
-      //await res.revalidate(`/posts/${getData.slug}`);
+      // await res.revalidate(`/posts/${getData.slug}`);
       nyoba = "ada slug";
     }
 
@@ -63,7 +63,8 @@ export default async function handler(req, res) {
       cobabaru: getData.slug || null,
       poi: `/posts/${getData.slug}`,
       nyoba: nyoba,
-      queryPath: req.query.path,
+      issue: issueNumber || null,
+      // queryPath: req.query.path,
 
       // cobaPaths: getPaths || null,
       // cobaPath: getPath || null,
