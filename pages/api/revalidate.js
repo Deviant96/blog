@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     await res.revalidate('/');
 
     if (getData.slug) {
-      await res.revalidate(`/posts/${getData.slug}`);
+      await res.revalidate('/posts/' + getData.slug);
       // nyoba = "ada slug";
     }
 
