@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
   const cobaPath = req.url;
   
-  const nyoba = null;
+  var nyoba = null;
 
   // if (!headers["Webhook-secret"]) {
   //   return res.status(403).send("Forbidden!")
