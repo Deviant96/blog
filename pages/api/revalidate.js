@@ -15,7 +15,9 @@ export default async function handler(req, res) {
 
   const getData = jsonBody.data;
 
-  const cobaPath = req.url
+  const cobaPath = req.url;
+  
+  const nyoba = null;
 
   // if (!headers["Webhook-secret"]) {
   //   return res.status(403).send("Forbidden!")
@@ -44,7 +46,8 @@ export default async function handler(req, res) {
     await res.revalidate('/')
 
     if (getData.slug) {
-      await res.revalidate(`/posts/${getData.slug}`)
+      //await res.revalidate(`/posts/${getData.slug}`)
+      nyoba = "ada slug";
     }
 
     // if (body.data.slug) {
@@ -59,6 +62,7 @@ export default async function handler(req, res) {
       path: cobaPath || null, 
       cobabaru: getData.slug || null,
       poi: `/posts/${getData.slug}`,
+      nyoba: nyoba,
 
       // cobaPaths: getPaths || null,
       // cobaPath: getPath || null,
