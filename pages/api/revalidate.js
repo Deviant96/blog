@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
   const cobaPath = req.url;
   
-  var nyoba = null;
+  // var nyoba = null;
 
   // if (!headers["Webhook-secret"]) {
   //   return res.status(403).send("Forbidden!")
@@ -62,7 +62,7 @@ export default async function handler(req, res) {
       path: cobaPath || null, 
       cobabaru: getData.slug || null,
       poi: `/posts/${getData.slug}`,
-      nyoba: nyoba,
+      // nyoba: nyoba,
       issue: issueNumber || null,
       // queryPath: req.query.path,
 
