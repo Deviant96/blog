@@ -78,12 +78,12 @@ export default async function handler(req, res) {
 
       // tesbody: req.body || null,
       // tesisibody: req.body.data.slug || null,
-    })
+    });
   } catch (err) {
     // If there was an error, Next.js will continue
     // to show the last successfully generated page
-    console.error(err)
-    return res.status(500).send('Error revalidating')
+    console.error(`Error revalidating page ${getData.slug}: ${err}`);
+    return res.status(500).send('Error revalidating');
   }
 }
 
